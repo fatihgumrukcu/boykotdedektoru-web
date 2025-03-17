@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marka İtiraz - Boykot Dedektörü</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <nav>
+            <div class="logo">Boykot Dedektörü</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="gizlilik.html">Gizlilik</a></li>
+                <li><a href="oneriler.html">Öneri</a></li>
+                <li><a href="itiraz.html" class="active">Marka İtiraz</a></li>
+                <li><a href="iletisim.html">Bize Ulaşın</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- MARKA İTİRAZ FORMU -->
+    <section class="appeal">
+        <div class="container">
+            <h1>Marka İtiraz Formu</h1>
+            <p>Eğer markanızın boykot listesinde haksız bir şekilde yer aldığını düşünüyorsanız, aşağıdaki formu doldurarak bizimle iletişime geçebilirsiniz.</p>
+
+            <form action="mailto:fatih.gmrkc@gmail.com" method="post" enctype="text/plain">
+                <label for="brand-name">Marka Adı:</label>
+                <input type="text" id="brand-name" name="brand-name" required>
+
+                <label for="representative">Yetkili Kişi:</label>
+                <input type="text" id="representative" name="representative" required>
+
+                <label for="email">Yetkili E-Posta:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="reason">İtiraz Gerekçesi:</label>
+                <textarea id="reason" name="reason" rows="5" required></textarea>
+
+                <button type="submit" class="btn">İtiraz Gönder</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2025 Boykot Dedektörü | Tüm Hakları Saklıdır.</p>
+    </footer>
+
+</body>
+</html>
