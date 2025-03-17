@@ -27,7 +27,7 @@ nav {
 
 /* NAVBAR LOGO */
 .logo {
-    font-size: 20px;
+    font-size: 30px;
     font-weight: bold;
     color: white;
 }
@@ -50,7 +50,7 @@ nav {
 }
 
 .nav-links a:hover, .nav-links .active {
-    color: #FFF;
+    color: #ffffff;
 }
 
 /* HERO BÖLÜMÜ */
