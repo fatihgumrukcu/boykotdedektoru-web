@@ -167,7 +167,7 @@ footer {
 
 /* NAVBAR MOBİL TASARIM */
 .nav-toggle {
-    display: none;
+    display: none; /* Varsayılan olarak görünmez */
     font-size: 24px;
     cursor: pointer;
     color: white;
@@ -183,7 +183,7 @@ footer {
 /* MOBİL UYUMLULUK & HAMBURGER MENÜ */
 @media (max-width: 768px) {
     .nav-toggle {
-        display: block;
+        display: block; /* Mobilde buton görünecek */
     }
 
     .nav-links {
