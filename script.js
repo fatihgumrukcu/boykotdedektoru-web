@@ -2,10 +2,19 @@ document.addEventListener("DOMContentLoaded", function () {
     const navToggle = document.querySelector(".nav-toggle");
     const navLinks = document.querySelector(".nav-links");
 
-    // Eğer hamburger menü butonu varsa aç/kapat işlemi
     if (navToggle && navLinks) {
+        // Menü aç/kapat
         navToggle.addEventListener("click", function () {
             navLinks.classList.toggle("show");
+        });
+
+        // Sayfa geçişlerinde menünün açık kalmasını engelle
+        document.querySelectorAll(".nav-links a").forEach(link => {
+            link.addEventListener("click", function () {
+                setTimeout(() => {
+                    navLinks.classList.remove("show");
+                }, 300);
+            });
         });
 
         // Sayfada başka bir yere tıklanınca menüyü kapat
