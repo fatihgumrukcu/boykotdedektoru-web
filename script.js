@@ -1,26 +1,26 @@
 document.addEventListener("DOMContentLoaded", function () {
     const navToggle = document.querySelector(".nav-toggle");
-    const navLinks = document.querySelector(".nav-links");
+    const mobileNav = document.querySelector(".mobile-nav");
 
-    if (navToggle && navLinks) {
+    if (navToggle && mobileNav) {
         // Menü aç/kapat
         navToggle.addEventListener("click", function () {
-            navLinks.classList.toggle("show");
+            mobileNav.classList.toggle("show");
         });
 
         // Sayfa geçişlerinde menünün açık kalmasını engelle
-        document.querySelectorAll(".nav-links a").forEach(link => {
+        document.querySelectorAll(".mobile-nav a").forEach(link => {
             link.addEventListener("click", function () {
                 setTimeout(() => {
-                    navLinks.classList.remove("show");
+                    mobileNav.classList.remove("show");
                 }, 300);
             });
         });
 
         // Sayfada başka bir yere tıklanınca menüyü kapat
         document.addEventListener("click", function (event) {
-            if (!navLinks.contains(event.target) && !navToggle.contains(event.target)) {
-                navLinks.classList.remove("show");
+            if (!mobileNav.contains(event.target) && !navToggle.contains(event.target)) {
+                mobileNav.classList.remove("show");
             }
         });
     }
