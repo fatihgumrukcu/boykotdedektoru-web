@@ -10,6 +10,11 @@ html, body {
     color: white;
 }
 
+/* Sayfa içeriğini düzenleme */
+main {
+    flex: 1;
+}
+
 /* NAVBAR */
 nav {
     display: flex;
@@ -27,15 +32,14 @@ nav {
     color: white;
 }
 
-/* MASAÜSTÜ MENÜ (Sadece Masaüstünde Gösterilecek) */
+/* NAVBAR LİNKLER */
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 15px;
 }
 
 .nav-links li {
-    margin: 0;
+    margin: 0 15px;
 }
 
 .nav-links a {
@@ -50,48 +54,77 @@ nav {
     color: #FFD700;
 }
 
-/* HAMBURGER MENÜ (Yandan Açılan, Sadece Mobilde Gösterilecek) */
-.mobile-nav {
-    position: fixed;
-    top: 0;
-    right: -250px; /* Başlangıçta gizli */
-    width: 250px;
-    height: 100%;
-    background: #1A3366;
+/* HERO BÖLÜMÜ */
+.hero {
+    background: url('assets/hero-image.jpg') no-repeat center center/cover;
+    height: 80vh;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    padding-top: 60px;
-    transition: right 0.4s ease-in-out; /* Animasyon ekledik */
-    z-index: 999;
-}
-
-.mobile-nav.show {
-    right: 0; /* Menü açıldığında sağdan içeri girecek */
-}
-
-.mobile-nav li {
-    margin: 15px 0;
-}
-
-.mobile-nav a {
+    align-items: center;
+    text-align: center;
     color: white;
-    text-decoration: none;
+    padding: 20px;
+}
+
+.hero-text {
+    background: rgba(26, 51, 102, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.hero p {
     font-size: 18px;
-    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* BUTON */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #FFD700;
+    color: #1A3366;
+    text-decoration: none;
+    border-radius: 5px;
     transition: 0.3s;
+    font-weight: bold;
 }
 
-.mobile-nav a:hover, .mobile-nav .active {
-    text-decoration: underline;
-    color: #FFD700;
+.btn:hover {
+    background: #FFC107;
 }
 
-/* HAMBURGER BUTONU (Sadece Mobilde Gözükecek) */
+/* SAYFA KAPSAMINDAKİ ORTAK KAPSAYICI (CONTAINER) */
+.container {
+    background: #1A3366;
+    color: white;
+    padding: 40px;
+    max-width: 800px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #1A3366;
+    color: white;
+    margin-top: auto;
+    width: 100%;
+    position: relative;
+}
+
+/* NAVBAR MOBİL TASARIM */
 .nav-toggle {
     display: none;
-    font-size: 28px;
+    font-size: 24px;
     cursor: pointer;
     color: white;
     background: none;
@@ -100,16 +133,33 @@ nav {
     position: absolute;
     right: 20px;
     top: 15px;
-    z-index: 1000;
+    z-index: 101;
 }
 
-/* SADECE MOBİLDE GÖSTER */
+/* MOBİL UYUMLULUK & HAMBURGER MENÜ */
 @media (max-width: 768px) {
     .nav-toggle {
         display: block; /* Mobilde buton görünecek */
     }
 
     .nav-links {
-        display: none; /* Masaüstü menüsünü mobilde gizle */
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #1A3366;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        text-align: center;
+        padding: 10px 0;
+        z-index: 100;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
     }
 }
