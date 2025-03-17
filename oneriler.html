@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Öneri Gönder - Boykot Dedektörü</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <nav>
+            <div class="logo">Boykot Dedektörü</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="gizlilik.html">Gizlilik</a></li>
+                <li><a href="oneriler.html" class="active">Öneri</a></li>
+                <li><a href="itiraz.html">Marka İtiraz</a></li>
+                <li><a href="iletisim.html">Bize Ulaşın</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ÖNERİ FORMU -->
+    <section class="suggestion">
+        <div class="container">
+            <h1>Öneri Gönder</h1>
+            <p>Boykot Dedektörü'ne eklenmesini istediğiniz markaları veya etik değerlendirmeleri paylaşabilirsiniz.</p>
+
+            <form action="mailto:fatih.gmrkc@gmail.com" method="post" enctype="text/plain">
+                <label for="brand-name">Marka Adı:</label>
+                <input type="text" id="brand-name" name="brand-name" required>
+
+                <label for="category">Kategori (Gıda, Teknoloji, Giyim vb.):</label>
+                <input type="text" id="category" name="category" required>
+
+                <label for="reason">Önerinizin Gerekçesi:</label>
+                <textarea id="reason" name="reason" rows="5" required></textarea>
+
+                <label for="email">E-Posta Ad
