@@ -50,8 +50,7 @@ nav {
 }
 
 .nav-links a:hover, .nav-links .active {
-    text-decoration: underline;
-    color: #FFD700;
+    color: #FFF;
 }
 
 /* HERO BÖLÜMÜ */
